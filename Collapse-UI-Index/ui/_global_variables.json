@@ -1,0 +1,12 @@
+{
+  "$cuigv:DebugElement": false,
+  "$cuigv:CompactMode": false,
+  "$cuigv:PrimaryColor": [ 1, 0.8627, 0 ],
+  "$cuigv:SecondaryColor": [ 0, 0, 0 ],
+  "$cuigv:FontPrimaryColor": [ 1, 1, 1 ],
+  "$cuigv:FontSecondaryColor": [ 0.7, 0.7, 0.7 ],
+  "$cuigv:BackgroundAlpha": 0.7,
+  "$cuigv:NoGameLogo": false,
+  "$cuigv:NoMarketplaceButton": false,
+  "$cuigv:NoRealmsPromoteInWorldSection": true
+}

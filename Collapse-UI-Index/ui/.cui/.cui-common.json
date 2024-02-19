@@ -1,0 +1,189 @@
+{ "namespace": "cui-common",
+  "experience_bar_template": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/ui/White",
+    "clips_children": true
+  },
+  "experience_bar_empty@cui-common.experience_bar_template": { "color": [ 0.4, 0.4, 0.4 ] },
+  "experience_bar_full@cui-common.experience_bar_template": { 
+    "type": "image",
+    "anchor_to": "left_middle",
+    "anchor_from": "left_middle",
+    "property_bag": {
+      "#size_binding_x": 0.0,
+      "#size_binding_y": 0.0
+    },
+    "bindings": [
+      { "binding_name": "#loading_bar_percentage",
+        "binding_type": "global"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(1.0 - (#loading_bar_percentage))",
+        "target_property_name": "#size_binding_x"
+      }
+    ],
+    "controls": [
+      {
+        "head@cui-common.gradient_renderer_template": {
+          "size": [ 20, "100%" ],
+          "layer": 90,
+          "gradient_direction": "horizontal",
+          "color1": [ 0.8, 0.8, 0.8, 0 ],
+          "color2": [ 0.8, 0.8, 0.8, 1 ],
+          "offset": [ -1, 0 ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle"
+        }
+      },
+      {
+        "background": {
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "offset": [ -1, 0 ],
+          "texture": "textures/ui/White",
+          "color": "$cuigv:PrimaryColor",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle"
+        }
+      }
+    ]
+  },
+  
+  "gradient_renderer_template": {
+    "type": "custom",
+    "renderer": "gradient_renderer",
+    "layer": -89
+  },
+  "screen_background": {
+    "type": "panel",
+    "controls": [
+      { "gradient@cui-common.gradient_renderer_template": {
+          "size": [ "55%", "100%" ],
+          "gradient_direction": "horizontal",
+          "color1": [ 0, 0, 0, 1 ],
+          "color2": [ 0, 0, 0, 0 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle"
+      }}
+  ]},
+  "close_button_panel": {
+    "type": "panel",
+    "layer": 1,
+    "size": "$close_button_panel_size",
+    "$button_alpha|default": 1,
+    "controls": [
+      { "close_button_image@common.close_button_image": {
+        "alpha": "$button_alpha"
+      }}
+  ]},
+  "close_button@common.close_button": {
+    "controls": [
+      { "default@cui-common.close_button_panel": { "$close_button_texture": "textures/ui/.cui-assets/.buttons/close_button_idle"}},
+      { "hover@cui-common.close_button_panel": { "$close_button_texture": "textures/ui/.cui-assets/.buttons/close_button_hover"}},
+      { "pressed@cui-common.close_button_panel": { "$close_button_texture": "textures/ui/.cui-assets/.buttons/close_button_pressed"}}
+  ]},
+  "menu_screen_background": {
+    "type": "panel",
+    "controls": [
+      { "gradient01@cui-common.gradient_renderer_template": {
+          "size": [ "100%", "20%" ],
+          "color1": [ 0, 0, 0, 1 ],
+          "color2": [ 0, 0, 0, 0 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+      }},
+      { "gradient02@cui-common.gradient_renderer_template": {
+          "size": [ "100%", "45%" ],
+          "color1": [ 0, 0, 0, 0 ],
+          "color2": [ 0, 0, 0, 1 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+      }}
+  ]},
+  "player_head_element": {
+    "type": "panel",
+    "size": [ 25, 25 ],
+    "clips_children": true,
+    "controls": [
+      { "skin_renderer": {
+          "type": "custom",
+          "layer": 5,
+          "camera_tilt_degrees": -10,
+          "starting_rotation": -30,
+          "rotation": "gesture_x",
+          "renderer": "paper_doll_renderer",
+          "size": [ 42, 92 ],
+          "offset": [ 0, 8 ]
+      }}
+  ]},
+  "header": {
+    "type": "panel",
+    "size": [ "100%", 14 ],
+    "$cuiv:header_text|default": "none",
+    "controls": [
+      { "background": {
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": "$cuigv:SecondaryColor",
+          "alpha": "$cuigv:BackgroundAlpha",
+          "size": [ "100%", "100%" ]
+      }},
+      { "list_label": {
+          "type": "label",
+          "size": [ "100% - 8px", 10 ],
+          "font_type": "MinecraftTen",
+          "text": "$cuiv:header_text",
+          "offset": [ 0, -2 ]
+      }},
+      { "outline": {
+          "type": "image",
+          "color": "$cuigv:PrimaryColor",
+          "texture": "textures/ui/White",
+          "size": [ "100% - 8px", 1 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -1 ]
+      }}
+  ]},
+  "element_background":{
+    "type": "image",
+    "$cuiv:element_background_alpha|default": 0.7,
+    "$cuiv:element_background_color|default": [ 0, 0, 0 ],
+    "$cuiv:element_background_size|default": [ "default", "100%cm" ],
+    "$cuiv:element_background_offset|default": [ 0, 0 ],
+    "$cuiv:element_background_anchor|default": "bottom_middle",
+    "$cuiv:element_background_texture|default": "textures/ui/White",
+    "$cuiv:element_background_contents|default": "",
+    "alpha": "$cuiv:element_background_alpha",
+    "color": "$cuiv:element_background_color",
+    "size": "$cuiv:element_background_size",
+    "offset": "$cuiv:element_background_offset",
+    "anchor_from": "$cuiv:element_background_anchor",
+    "anchor_to": "$cuiv:element_background_anchor",
+    "texture": "$cuiv:element_background_texture",
+    "controls": [
+      { "header_contents@$cuiv:element_background_contents": {}},
+      { "header_label":{
+          "type": "label",
+          "text": "$text",
+          "layer": 1,
+          "shadow": false,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 3 ],
+          "font_type": "MinecraftTen",
+          "text_alignment": "center",
+          "max_size": [ "90%", 11 ],
+          "controls": [
+            { "contentline": {
+                "type": "image",
+                "size": [ "100% + 4px", 1 ],
+                "texture": "textures/ui/White",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0.5, 13 ]
+            }}
+      ]}}
+  ]}
+}

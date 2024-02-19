@@ -1,0 +1,11 @@
+{ "namespace": "cui-anims",
+  "loading_anim": {
+    "anim_type": "flip_book",
+    "initial_uv": [ 0, 0 ],
+    "frame_count": 16,
+    "frame_step": 32,
+    "fps": 20,
+    "reversible": false,
+    "easing": "linear"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "play_screen@common.base_screen": {
+    "$screen_content": "cui-play_screen.root_contents",
+    "$screen_bg_content": "cui-common.menu_screen_background",
+    "$world_picker_screen": false
+  },
+  "world_screenshot_base": {
+    "size": [ "100%cm + 2px", "100%" ],
+    "texture": ""
+  },
+  "collection_world_screenshot/screenshot_picture": {
+    "size": [ "173.91%y", "100%" ],
+    "offset": [ 0, 0 ]
+  },
+  "realms_world_details": {
+    "color": [ 0.7, 0.7, 0.7 ],
+    "font_size": "small"
+  }
+}
