@@ -22,11 +22,14 @@
     "offset": [ -2, -12 ],
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
-    "bindings": [{ 
-      "binding_name": "#cancel_visible",
-      "binding_name_override": "#visible"
-  }]},
-  
+    "bindings": [
+      { "binding_name": "#cancel_visible",
+        "binding_name_override": "#visible"
+      },
+      { "binding_name": "#cancel_button_text",
+        "binding_type": "global"
+      }
+  ]},
   "loading_icon": {
     "type": "image",
     "texture": "textures/ui/.cui-assets/loadingharlow",

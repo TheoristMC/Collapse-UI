@@ -78,6 +78,7 @@
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "text": "#network_world_header",
+                "color": "$cuigv:FontPrimaryColor",
                 "bindings": [
                   { "binding_name": "#network_world_header",
                     "binding_type": "collection",
@@ -109,7 +110,7 @@
                 "layer": 1,
                 "anchor_from": "right_middle",
                 "anchor_to": "right_middle",
-                "color": [ 0.7, 0.7, 0.7 ],
+                "color": "$cuigv:FontSecondaryColor",
                 "size": [ "default", 10 ],
                 "bindings": [
                   { "binding_type": "collection",
