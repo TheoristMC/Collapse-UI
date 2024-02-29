@@ -6,6 +6,9 @@
   "$cuigv:FontSecondaryColor": [ 0.7, 0.7, 0.7 ],
   "$cuigv:BackgroundAlpha": 0.7,
   
+  // Experiments
+  "$cuigv:SearchBoxSystem": true,
+  
   // Layouts
   "$cuigv:NoGameLogo": false,
   "$cuigv:NoMarketplaceButton": false,

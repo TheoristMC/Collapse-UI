@@ -78,7 +78,7 @@
             { "top_side": {
                 "type": "stack_panel",
                 "orientation": "horizontal",
-                "size": [ "100%", "50%" ],
+                "size": [ "100%", 40 ],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "controls": [
@@ -87,9 +87,12 @@
                       "shadow": false,
                       "localize": false,
                       "text": "#local_world_name",
-                      "size": [ "fill", 10 ],
+                      "size": [ "fill", 40 ],
+                      "font_type": "$cuiv:primary_label_font",
+                      "font_scale_factor": "$cuiv:primary_label_font_size",
                       "color": "$cuigv:FontPrimaryColor",
                       "layer": 1,
+                      
                       "bindings": [
                         { "binding_name": "#local_world_name",
                           "binding_type": "collection",
@@ -99,9 +102,11 @@
                   { "lock_1@play.local_world_lock_panel": {}},
                   { "local_world_date": {
                       "type": "label",
-                      "size": [ "default", 10 ],
+                      "size": [ "default", 40 ],
                       "color": "$cuigv:FontPrimaryColor",
                       "layer": 1,
+                      "font_type": "$cuiv:primary_label_font",
+                      "font_scale_factor": "$cuiv:primary_label_font_size",
                       "text": "#local_world_date",
                       "shadow": false,
                       "bindings": [
@@ -116,7 +121,7 @@
                 "anchor_to": "bottom_left",
                 "type": "stack_panel",
                 "orientation": "horizontal",
-                "size": [ "100%", "50%" ],
+                "size": [ "100%", 10 ],
                 "offset": [ 0, 1 ],
                 "controls": [
                   { "realms_plus_icon@play.realms_plus_banner": {
@@ -149,7 +154,50 @@
             ]}}
       ]}}
   ]},
-  
+  "search_world_grid": {
+    "type": "stack_panel",
+    "size": ["100%","100%c"],
+    "collection_name": "local_worlds",
+    "$cuiv:ec": "cui-worlds_section.search_world",
+    "controls": [
+      { "element001@$cuiv:ec": { "$cuiv:ci": 0 }},
+      { "element002@$cuiv:ec": { "$cuiv:ci": 1 }},
+      { "element003@$cuiv:ec": { "$cuiv:ci": 2 }},
+      { "element004@$cuiv:ec": { "$cuiv:ci": 3 }},
+      { "element005@$cuiv:ec": { "$cuiv:ci": 4 }},
+      { "element006@$cuiv:ec": { "$cuiv:ci": 5 }},
+      { "element007@$cuiv:ec": { "$cuiv:ci": 6 }},
+      { "element008@$cuiv:ec": { "$cuiv:ci": 7 }},
+      { "element009@$cuiv:ec": { "$cuiv:ci": 8 }},
+      { "element010@$cuiv:ec": { "$cuiv:ci": 9 }},
+      { "element011@$cuiv:ec": { "$cuiv:ci": 10 }},
+      { "element012@$cuiv:ec": { "$cuiv:ci": 11 }},
+      { "element013@$cuiv:ec": { "$cuiv:ci": 12 }},
+      { "element014@$cuiv:ec": { "$cuiv:ci": 13 }},
+      { "element015@$cuiv:ec": { "$cuiv:ci": 14 }},
+      { "element016@$cuiv:ec": { "$cuiv:ci": 15 }},
+      { "element017@$cuiv:ec": { "$cuiv:ci": 16 }},
+      { "element018@$cuiv:ec": { "$cuiv:ci": 17 }},
+      { "element019@$cuiv:ec": { "$cuiv:ci": 18 }},
+      { "element020@$cuiv:ec": { "$cuiv:ci": 19 }}
+    ]
+  },
+  "search_world@cui-worlds_section.local_world_item": {
+    "collection_index": "$cuiv:ci",
+    "bindings": [
+      { "binding_name": "#local_world_name",
+        "binding_type": "collection",
+        "binding_collection_name": "local_worlds"
+      },
+      { "binding_type": "view",
+        "source_control_name": "string_world",
+        "source_property_name": "#item_name",
+        "target_property_name": "#world_search_string"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(not (((#local_world_name - #world_search_string) = #local_world_name) - ' ' - '§r' - '§f'))",
+        "target_property_name": "#visible"
+  }]},
   "local_world_item_button@cui-button.text_button": {
     "$cuiv:button_type_panel": "play.world_content_panel",
     "$pressed_button_name": "button.menu_start_local_world",
@@ -171,9 +219,21 @@
     "type": "stack_panel",
     "layer": 1,
     "offset": [ 0, 0 ],
-    "size": [ "100%", 30 ],
+    "size": "$cuiv:world_screenshot_size",
     "orientation": "horizontal",
     "use_child_anchors": true,
+    "$cuiv:is_recent_world|default": false,
+    "$cuiv:world_screenshot_size|default": [ "100%", 30 ],
+    "$cuiv:primary_label_font|default": "",
+    "$cuiv:primary_label_font_size|default": 1,
+    "variables": [
+      {
+        "requires": "$cuiv:is_recent_world",
+        "$cuiv:world_screenshot_size": [ "100%", 65 ],
+        "$cuiv:primary_label_font": "MinecraftTen",
+        "$cuiv:primary_label_font_size": 1.3
+      }
+    ],
     "$local_world_edit_button_visible|default": true,
     "controls": [
       { "pudding01": { "type": "panel", "size": [ 4, "100%" ]}},
@@ -225,6 +285,23 @@
                 ]
           }}]
       }},
+      { "padding_06": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "most_recent_label@cui-common.header": { "$cuiv:header_text": "Most Recent" }},
+      { "padding_07": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "most_recent": {
+          "type": "stack_panel",
+          "$cuiv:is_recent_world": true,
+          "collection_name": "local_worlds",
+          "controls": [
+            { "recent_world@cui-worlds_section.local_world_item": {
+                "collection_index": 0
+            }}
+      ]}},
+      { "padding_08": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "experiment_search_label@cui-common.header": { "$cuiv:header_text": "Experiment World Search", "ignored": "(not $cuigv:SearchBoxSystem)"}},
+      { "padding_09": { "type": "panel", "size": [ "100%", 2 ], "ignored": "(not $cuigv:SearchBoxSystem)"}},
+      { "search_bar@cui-common.text_box": { "$cuiv:placeholder_text": "Search World (Case sensitive)", "$cuiv:text_edit_text_control": "string_world", "size": [ "100%", 20 ], "ignored": "(not $cuigv:SearchBoxSystem)"}},
+      { "test_grid@cui-worlds_section.search_world_grid": { "ignored": "(not $cuigv:SearchBoxSystem)"}},
       { "padding_01": { "type": "panel", "ignored": "((not $is_realms_enabled) or ($cuigv:NoRealmsPromoteInWorldSection))", "size": [ "100%", 2 ]}},
       { "realms_panel": {
           "ignored": "((not $is_realms_enabled) or ($cuigv:NoRealmsPromoteInWorldSection))",

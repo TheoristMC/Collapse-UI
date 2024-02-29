@@ -9,12 +9,6 @@
     },
     {
       "font_format": "ttf",
-      "version": 1,
-      "font_name": "pixel",
-      "font_file": "font/pixel"
-    },
-    {
-      "font_format": "ttf",
       "font_name": "MinecraftTen",
       "version": 1,
       "font_file": "font/minecraft-ten",
