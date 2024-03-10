@@ -22,6 +22,7 @@
               "binding_collection_name": "$collection_name"
           }]
       }},
+      { "padding_03": { "ignored": "(not $cuigv:OriginUI)", "type": "panel", "size": [ 2, 2 ]}},
       { "server_edit_button@cui-button.text_button": {
           "ignored": "(not $cuiv:is_public_server)",
           "$cuiv:button_type_panel": "play.edit_icon",

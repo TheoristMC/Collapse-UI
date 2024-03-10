@@ -239,13 +239,14 @@
       { "pudding01": { "type": "panel", "size": [ 4, "100%" ]}},
       { "item_button": {
           "type": "panel",
-          "size": [ "fill", "100% + 1px" ],
+          "size": [ "fill", "100%" ],
           "controls": [
             { "h@cui-worlds_section.local_world_item_button": { "size": [ "100%", "100%" ]}}
       ]}},
+      { "padding_03": { "ignored": "(not $cuigv:OriginUI)", "type": "panel", "size": [ 2, 2 ]}},
       { "edit_button": {
           "type": "panel",
-          "size": [ "100%y - 0.5px", "100% + 1px" ],
+          "size": [ "100%y", "100%" ],
           "controls": [
             { "h@cui-worlds_section.local_world_edit_button": {}}
       ]}},
@@ -280,7 +281,9 @@
                 "orientation": "horizontal",
                 "controls": [
                   { "@create_new_world_button": {}},
+                  { "padding_01": { "ignored": "(not $cuigv:OriginUI)", "type": "panel", "size": [ 2, 2 ]}},
                   { "@quick_play_button": {}},
+                  { "padding_02": { "ignored": "(not $cuigv:OriginUI)", "type": "panel", "size": [ 2, 2 ]}},
                   { "@import_world_button": {}}
                 ]
           }}]

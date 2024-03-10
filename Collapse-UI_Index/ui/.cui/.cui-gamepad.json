@@ -68,5 +68,13 @@
   "gamepad_tooltip_y@cui-gamepad.gamepad_tooltip": {
     "$cuiv:icon_texture": "textures/ui/.cui-assets/.controller/y",
     "$icon_description_bind": "#button_y_description"
+  },
+  "gamepad_tooltip_lb@cui-gamepad.gamepad_tooltip": {
+    "$cuiv:icon_texture": "textures/ui/.cui-assets/.controller/lb",
+    "$icon_description_bind": "#controller_left_bumper_description"
+  },
+  "gamepad_tooltip_rb@cui-gamepad.gamepad_tooltip": {
+    "$cuiv:icon_texture": "textures/ui/.cui-assets/.controller/rb",
+    "$icon_description_bind": "#controller_right_bumper_description"
   }
 }

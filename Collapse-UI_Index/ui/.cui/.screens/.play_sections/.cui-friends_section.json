@@ -35,7 +35,9 @@
               "binding_name_override": "#enabled"
           }]
       }},
+      { "padding_01": { "ignored": "(not $cuigv:OriginUI)", "type": "panel", "size": [ 2, 2 ]}},
       { "join_by_code_button@cui-friends_section.join_by_code_button": { "size": [ "fill", 30 ]}},
+      { "padding_02": { "ignored": "(not $cuigv:OriginUI)", "type": "panel", "size": [ 2, 2 ]}},
       { "notification_button_panel": {
           "type": "panel",
           "size": [ "13%", 30 ],
@@ -171,10 +173,11 @@
     "size": [ "100%", 29 ],
     "orientation": "horizontal",
     "controls": [
-      { "realms_world_item_button@cui-friends_section.realms_world_item_button": { "size": [ "fill", "100% + 1px" ], "layer": 1 }},
+      { "realms_world_item_button@cui-friends_section.realms_world_item_button": { "size": [ "fill", "100%" ], "layer": 1 }},
+      { "padding_01": { "ignored": "(not $cuigv:OriginUI)", "type": "panel", "size": [ 2, 2 ]}},
       { "edit_panel": {
           "type": "panel",
-          "size": [ "100%y - 1px", "100% + 1px" ],
+          "size": [ "100%y", "100%" ],
           "controls": [
             { "realms_world_edit_button@cui-friends_section.realms_world_edit_button": { "layer": 1 }},
             { "realms_world_expiry_notification_image": {
@@ -199,15 +202,17 @@
               "binding_collection_name": "$realms_worlds_collection_name"
           }]
       }},
+      { "padding_02": { "ignored": "(not $cuigv:OriginUI)", "type": "panel", "size": [ 2, 2 ]}},
       { "feed_panel": {
           "type": "panel",
-          "size": [ "100%c - 1px", "100% + 1px" ],
+          "size": [ "100%c", "100%" ],
           "controls": [
             { "realms_feed_button@cui-friends_section.realms_feed_button": { "layer": 1 }}
       ]}},
+      { "padding_03": { "ignored": "(not $cuigv:OriginUI)", "type": "panel", "size": [ 2, 2 ]}},
       { "leave_realm_panel": {
           "type": "panel",
-          "size": [ "100%c - 1px", "100% + 1px" ],
+          "size": [ "100%c", "100%" ],
           "controls": [
             { "leave_friends_realm_button@cui-friends_section.leave_friends_realm_button": {
                 "layer": 1

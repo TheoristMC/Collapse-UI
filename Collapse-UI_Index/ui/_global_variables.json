@@ -7,9 +7,11 @@
   "$cuigv:BackgroundAlpha": 0.7,
   
   // Experiments
+  "$cuigv:OriginUI": true,
   "$cuigv:SearchBoxSystem": true,
   
   // Layouts
+  "$cuigv:VanillaPaperdoll": false,
   "$cuigv:NoGameLogo": false,
   "$cuigv:NoMarketplaceButton": false,
   "$cuigv:NoRealmsPromoteInWorldSection": true,

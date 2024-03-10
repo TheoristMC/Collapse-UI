@@ -1,12 +1,12 @@
 { "ui_defs": [
-    "ui/arcdustry_custom/percentage_template.json",
-    "ui/arcdustry_custom/bar_system.json",
     
   "ui/.cui/.cui-anims.json",
   "ui/.cui/.cui-button.json",
   "ui/.cui/.cui-common.json",
   "ui/.cui/.cui-debug.json",
   "ui/.cui/.cui-gamepad.json",
+  "ui/.cui/.origin_screens/.cui-start_screen.json",
+  "ui/.cui/.origin_screens/.cui-play_screen.json",
   
   "ui/.cui/.screens/.cui-start_screen.json",
   "ui/.cui/.screens/.cui-play_screen.json",

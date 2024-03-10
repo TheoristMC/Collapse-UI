@@ -12,14 +12,9 @@
   "play_screen_core": {
     "type": "panel",
     "controls": [
-      {
-        "@cui-play_screen.tab_element": { "layer": 10 }
-      },
-      {
-        "@cui-play_screen.play_screen_panel": {}
-      }
-    ]
-  },
+      { "@cui-play_screen.tab_element": { "layer": 10 }},
+      { "@cui-play_screen.play_screen_panel": {}}
+  ]},
   "play_screen_panel": {
     "type": "panel",
     "size": [ "100% - 85px", "100%" ],
@@ -81,69 +76,6 @@
     "anchor_from": "top_right",
     "anchor_to": "top_right"
   },
-  "general_scroll_contents": {
-    "type": "input_panel",
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "focus_container": true,
-    "use_last_focus": true,
-    "focus_navigation_mode_down": "contained",
-    "focus_navigation_mode_up": "contained",
-    "focus_navigation_mode_right": "contained",
-    "focus_navigation_mode_left": "contained",
-    "controls": [
-      { "scrolling_panel@cui-play_screen.common_scrolling_panel": {
-          "size": [ "100% - 4px", "100% - 4px" ],
-          "offset": [ 2, 2 ],
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "layer": 1,
-          "$scrolling_content|default": "cui-play_screen.test_scroll_panel"
-      }}
-  ]},
-  "test_scroll_contents": {
-    "type": "input_panel",
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "focus_container": true,
-    "use_last_focus": true,
-    "focus_navigation_mode_down": "contained",
-    "focus_navigation_mode_up": "contained",
-    "focus_navigation_mode_right": "contained",
-    "focus_navigation_mode_left": "contained",
-    "controls": [
-      { "scrolling_panel@cui-play_screen.common_scrolling_panel": {
-          "size": [ "100% - 4px", "100% - 4px" ],
-          "offset": [ 2, 2 ],
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "layer": 1,
-          "$scrolling_content": "cui-play_screen.test_stack_panel"
-      }}
-  ]},
-  "test_scroll_panel": {
-    "type": "panel",
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "size": [ "100%-4px", "100%c" ],
-    "offset": [ 2, 0 ],
-    "controls": [
-      { "worlds_list_stack_panel@cui-play_screen.test_stack_panel": {}}
-  ]},
-  "test_stack_panel": {
-    "type": "stack_panel",
-    "orientation": "vertical",
-    "size": [ "100%", "100%c" ],
-    "$cuiv:test_panel_label|default": "none",
-    "controls": [
-      {
-        "label_debug": {
-          "type": "label",
-          "text": "$cuiv:test_panel_label"
-        }
-      }
-    ]
-  },
   "tab_element": {
     "type": "panel",
     "controls": [
@@ -176,6 +108,65 @@
           "controls": [
             { "world_navigation_tab@cui-play_screen.world_navigation_tab": { "size": [ "fill", "100%" ]}},
             { "friends_navigation_tab@cui-play_screen.friends_navigation_tab": { "size": [ "fill", "100%" ]}},
+            { "server_navigation_tab@cui-play_screen.server_navigation_tab": { "size": [ "fill", "100%" ]}}
+          ]
+        }
+      }
+    ]
+  },
+  "adv_tab_content": {
+    "type": "panel",
+    "controls": [
+      { "text_section": {
+          "type": "panel",
+          "controls": [
+            { "label": {
+                "type": "label",
+                "shadow": false,
+                "layer": 3,
+                "font_type": "dainbold",
+                "font_scale_factor": 1.20,
+                "color": "$text_color",
+                "text": "$cuiv:tab_name"
+            }}
+      ]}}
+  ]},
+  "top_tab@cui-button.tab_button": {
+    "$radio_toggle_group": true,
+    "$toggle_tts_enabled_binding_type": "global",
+    "$toggle_name": "navigation_tab",
+    "$toggle_group_default_selected": "$default_tab",
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "$toggle_tts_type_priority": 1001,
+    "$toggle_tts_toggle_on_text": "",
+    "$toggle_tts_toggle_off_text": "",
+    "$toggle_tts_index_priority": 1002,
+    "$cuiv:tab_content": "cui-play_screen.adv_tab_content"
+  },
+  "world_navigation_tab@cui-play_screen.top_tab": {
+    "$tab_view_binding_name": "world_navigation_tab_toggle",
+    "$cuiv:count_text_name": "#world_item_count",
+    "$cuiv:tab_name": "selectWorld.tab.worlds",
+    "$toggle_group_forced_index": 0,
+    "variables": [
+      { "requires": "$is_editor_mode_enabled",
+        "$cuiv:tab_name": "playscreen.editor.worlds"
+      }
+  ]},
+  "friends_navigation_tab@cui-play_screen.top_tab": {
+    "$tab_view_binding_name": "friends_navigation_tab_toggle",
+    "$cuiv:count_text_name": "#friend_world_item_count",
+    "$cuiv:tab_name": "selectWorld.tab.friends",
+    "$toggle_group_forced_index": 1
+  },
+  "server_navigation_tab@cui-play_screen.top_tab": {
+    "$tab_view_binding_name": "server_navigation_tab_toggle",
+    "$cuiv:count_text_name": "#server_world_item_count",
+    "$cuiv:tab_name": "selectWorld.tab.thirdParty",
+    "$toggle_group_forced_index": 2
+  }
+}ill", "100%" ]}},
             { "server_navigation_tab@cui-play_screen.server_navigation_tab": { "size": [ "fill", "100%" ]}}
           ]
         }

@@ -12,38 +12,16 @@
   ]},
   "gamepad_tooltips": {
     "type": "stack_panel",
-    "orientation": "vertical",
-    "size": [ "100%c", "100%c" ],
-    "anchor_from": "bottom_right",
-    "anchor_to": "bottom_right",
-    "offset": [ -12, -20 ],
-    "use_child_anchors": true,
+    "orientation": "horizontal",
+    "size": [ "100%c", 15 ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [ 4, -10 ],
+    "use_child_anchors": false,
     "controls": [
-      { "gamepad_tooltip_a@cui-gamepad.gamepad_tooltip_a": {
-        "anchor_from": "right_middle",
-        "anchor_to": "right_middle"
-      }},
+      { "gamepad_tooltip_a@cui-gamepad.gamepad_tooltip_a": {}},
       { "gamepad_tooltip_b@cui-gamepad.gamepad_tooltip_b": {
-          "ignored": "(not $can_quit)",
-          "anchor_to": "right_middle",
-          "anchor_from": "right_middle"
-      }},
-      { "gamepad_tooltip_y@cui-gamepad.gamepad_tooltip_y": {
-          "anchor_to": "right_middle",
-          "anchor_from": "right_middle",
-          "bindings": [
-            { "binding_name": "#y_helper_visible",
-              "binding_name_override": "#visible",
-              "binding_condition": "always"
-          }]
-      }},
-      { "gamepad_tooltip_x@cui-gamepad.gamepad_tooltip_x": {
-          "anchor_to": "right_middle",
-          "anchor_from": "right_middle",
-          "bindings": [
-            { "binding_name": "#x_helper_visible",
-              "binding_name_override": "#visible"
-          }]
+          "ignored": "(not $can_quit)"
       }}
   ]},
   
@@ -357,6 +335,34 @@
                 "anchor_to": "top_left",
                 "font_type": "dainbold",
                 "offset": [ 145, 10 ],
+                "alpha": 0.7
+            }}
+      ]}}
+  ]},
+  "button_label": {
+    "type": "label",
+    "layer": 2,
+    "$cuiv:text_color_main|default": [ 1, 1, 1 ],
+    "$cuiv:button_text_offset|default": [ 3, -0.5 ],
+    "offset": "$cuiv:button_text_offset",
+    "font_type": "dainbold",
+    "font_scale_factor": 1.20,
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "text": "$cuiv:button_text",
+    "color": "$cuiv:text_color_main",
+    "shadow": "$cuiv:button_text_shadow",
+    "$cuiv:anims|default": [],
+    "anims": "$cuiv:anims",
+    "variables": [
+      {
+        "requires": "(($hover_state) or ($pressed_state))",
+        "$cuiv:text_color_main": [ 1, 0.8627, 0 ],
+        "$cuiv:button_text_offset": [ 7, -0.5 ]
+      }
+    ]
+  }
+}   "offset": [ 145, 10 ],
                 "alpha": 0.7
             }}
       ]}}

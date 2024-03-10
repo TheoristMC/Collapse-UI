@@ -99,7 +99,8 @@
       }},
       { "button_content": {
           "type": "panel",
-          "size": [ "100% - 6px", "100% - 6px" ],
+          "size": "$cuiv:button_content_size",
+          "$cuiv:button_content_size|default": [ "100% - 6px", "100% - 6px" ],
           "controls": [
             { "button_type_panel@$cuiv:button_type_panel": { "layer": 3 }}
       ]}}
@@ -174,15 +175,14 @@
     "$is_hover_state|default": false,
     "$allow_controller_back_button_mapping|default": false,
     "$top_tab_tts_name|default": "accessibility.tab.tts.title",
-    "$unchecked_default_image|default": "",
-    "$unchecked_hover_image|default": "",
-    "$unchecked_locked_image|default": "",
-    "$unchecked_locked_hover_image|default": "",
-    "$checked_default_image|default": "textures/ui/White",
-    "$checked_hover_image|default": "textures/ui/White",
-    "$checked_locked_image|default": "textures/ui/White",
-    "$checked_locked_hover_image|default": "textures/ui/White",
-    
+    "$unchecked_default_image|default": "textures/ui/.cui-assets/.buttons/button_idle",
+    "$unchecked_hover_image|default": "textures/ui/.cui-assets/.buttons/button_idle",
+    "$unchecked_locked_image|default": "textures/ui/.cui-assets/.buttons/button_idle",
+    "$unchecked_locked_hover_image|default": "textures/ui/.cui-assets/.buttons/button_idle",
+    "$checked_default_image|default": "textures/ui/.cui-assets/background",
+    "$checked_hover_image|default": "textures/ui/.cui-assets/background",
+    "$checked_locked_image|default": "textures/ui/.cui-assets/background",
+    "$checked_locked_hover_image|default": "textures/ui/.cui-assets/background",
     "controls": [
       {
         "$tab_view_binding_name@common.toggle": {
