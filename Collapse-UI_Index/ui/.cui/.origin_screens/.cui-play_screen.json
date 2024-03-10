@@ -25,6 +25,26 @@
       { "tab_content_panel@cuiorigin-play_screen.tab_content_element": { "layer": 2 }}
     ]
   },
+  "general_scroll_contents": {
+    "type": "input_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "focus_container": true,
+    "use_last_focus": true,
+    "focus_navigation_mode_down": "contained",
+    "focus_navigation_mode_up": "contained",
+    "focus_navigation_mode_right": "contained",
+    "focus_navigation_mode_left": "contained",
+    "controls": [
+      { "scrolling_panel@cui-play_screen.common_scrolling_panel": {
+          "size": [ "100% - 4px", "100% - 4px" ],
+          "offset": [ 2, 2 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 1,
+          "$scrolling_content|default": "cui-play_screen.test_scroll_panel"
+      }}
+  ]},
   "tab_content_element": {
     "type": "input_panel",
     "size": [ "100%", "100%" ],
