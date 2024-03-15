@@ -29,6 +29,7 @@
           }]
       }}
   ]},
+  
   "hotbar_elipses_panel_left_content": {
     "$hotbar_elipses_button_size": [ 20, 22 ],
     "controls": [

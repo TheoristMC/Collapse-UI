@@ -11,6 +11,23 @@
       "uuid": "c4a12d1d-2fc8-4dca-a412-a413536c40b2",
       "version": [ 1, 0, 0 ]
   }],
+  "subpacks": [
+    {
+      "folder_name": "ps",
+      "name": "Controller Tooltips - Playstation",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "switch",
+      "name": "Controller Tooltips - Switch",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "default",
+      "name": "Controller Tooltips - Xbox (Default)",
+      "memory_tier": 0
+    }
+  ],
   "metadata": {
     "authors": [ "Arxance (Harlow)" ]
 }}

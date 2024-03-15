@@ -237,6 +237,7 @@
     "anchor_to": "top_left",
     "$cuiv:title_back_button|default": true,
     "$cuiv:title_text|default": "Collapse-UI",
+    "$cuiv:title_text_subtitle|default": "",
     "controls": [
       { "close_button@cui-common.close_button": {
           "ignored": "(not $cuiv:title_back_button)",
@@ -255,7 +256,7 @@
             { "version_label": {
                 "ignored": "$cuiv:title_back_button",
                 "type": "label",
-                "text": "v1.2",
+                "text": "$cuiv:title_text_subtitle",
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "font_type": "dainbold",

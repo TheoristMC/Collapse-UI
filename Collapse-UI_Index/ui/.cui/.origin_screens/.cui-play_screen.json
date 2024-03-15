@@ -109,26 +109,6 @@
     "anchor_from": "top_right",
     "anchor_to": "top_right"
   },
-  "general_scroll_contents": {
-    "type": "input_panel",
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "focus_container": true,
-    "use_last_focus": true,
-    "focus_navigation_mode_down": "contained",
-    "focus_navigation_mode_up": "contained",
-    "focus_navigation_mode_right": "contained",
-    "focus_navigation_mode_left": "contained",
-    "controls": [
-      { "scrolling_panel@cuiorigin-play_screen.common_scrolling_panel": {
-          "size": [ "100% - 4px", "100% - 4px" ],
-          "offset": [ 2, 2 ],
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "layer": 1,
-          "$scrolling_content|default": "cuiorigin-play_screen.test_scroll_panel"
-      }}
-  ]},
   "tab_element": {
     "type": "panel",
     "controls": [
@@ -207,6 +187,25 @@
     "$tab_view_binding_name": "world_navigation_tab_toggle",
     "$cuiv:count_text_name": "#world_item_count",
     "$cuiv:tab_name": "selectWorld.tab.worlds",
+    "$toggle_group_forced_index": 0,
+    "variables": [
+      { "requires": "$is_editor_mode_enabled",
+        "$cuiv:tab_name": "playscreen.editor.worlds"
+      }
+  ]},
+  "friends_navigation_tab@cuiorigin-play_screen.top_tab": {
+    "$tab_view_binding_name": "friends_navigation_tab_toggle",
+    "$cuiv:count_text_name": "#friend_world_item_count",
+    "$cuiv:tab_name": "selectWorld.tab.friends",
+    "$toggle_group_forced_index": 1
+  },
+  "server_navigation_tab@cuiorigin-play_screen.top_tab": {
+    "$tab_view_binding_name": "server_navigation_tab_toggle",
+    "$cuiv:count_text_name": "#server_world_item_count",
+    "$cuiv:tab_name": "selectWorld.tab.thirdParty",
+    "$toggle_group_forced_index": 2
+  }
+}.tab.worlds",
     "$toggle_group_forced_index": 0,
     "variables": [
       { "requires": "$is_editor_mode_enabled",
