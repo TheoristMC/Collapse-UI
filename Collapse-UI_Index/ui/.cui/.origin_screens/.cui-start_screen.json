@@ -2,7 +2,7 @@
   "root_contents": {
     "type": "panel",
     "controls": [
-      { "@cui-common.title_core": { "$cuiv:title_back_button": false, "$cuiv:title_text_subtitle": "v1.3" }},
+      { "@cui-common.title_core": { "$cuiv:title_back_button": false, "$cuiv:title_text_subtitle": "v1.3.1" }},
       { "@main_button": {}},
       { "@additional_button": {}},
       { "@xbox_element": {}},
@@ -31,6 +31,15 @@
     "offset": [ -12, 5 ],
     "anchor_from": "top_right",
     "anchor_to": "top_right",
+    "$cuiv:anim_from": [ -12, -50 ],
+    "$cuiv:anim_to": [ -12, 5 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cui-anims.screen_outro_anim_push",
+      "@cui-anims.screen_outro_anim_pop",
+      "@cui-anims.screen_intro_anim_push",
+      "@cui-anims.screen_intro_anim_pop"
+    ],
     "controls": [
       { "player_head_element@cui-common.player_head_element_origin": {
         "anchor_from": "right_middle",

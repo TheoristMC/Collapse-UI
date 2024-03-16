@@ -18,6 +18,15 @@
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
     "$cuiv:button_content_size": [ "100%", "100%" ],
+    "$cuiv:anim_from": [ "-25%", 0 ],
+    "$cuiv:anim_to": [ 14, 0 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cui-anims.screen_outro_anim_push",
+      "@cui-anims.screen_outro_anim_pop",
+      "@cui-anims.screen_intro_anim_push",
+      "@cui-anims.screen_intro_anim_pop"
+    ],
     "controls": [
       { "play@cui-button.text_button": {
           "size": [ 200, 100 ],

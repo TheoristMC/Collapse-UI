@@ -165,7 +165,7 @@
           "controls": [
             { "text_version": {
                 "type": "label",
-                "text": "Collapse-UI v1.1",
+                "text": "Collapse-UI v1.3.1",
                 "offset": [ 0.5, 0.5 ],
                 "color": "$cuigv:FontPrimaryColor"
             }}
@@ -362,7 +362,7 @@
       }
     ]
   }
-}   "offset": [ 145, 10 ],
+} "offset": [ 145, 10 ],
                 "alpha": 0.7
             }}
       ]}}

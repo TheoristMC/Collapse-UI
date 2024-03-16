@@ -215,7 +215,7 @@
     "controls": [
       { "gradient01@cui-common.gradient_renderer_template": {
           "size": [ "100%", "20%" ],
-          "color1": [ 0, 0, 0, 1 ],
+          "color1": [ 0, 0, 0, 0.7 ],
           "color2": [ 0, 0, 0, 0 ],
           "anchor_from": "top_middle",
           "anchor_to": "top_middle"
@@ -223,7 +223,7 @@
       { "gradient02@cui-common.gradient_renderer_template": {
           "size": [ "100%", "45%" ],
           "color1": [ 0, 0, 0, 0 ],
-          "color2": [ 0, 0, 0, 1 ],
+          "color2": [ 0, 0, 0, 0.7 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle"
       }}
@@ -238,6 +238,16 @@
     "$cuiv:title_back_button|default": true,
     "$cuiv:title_text|default": "Collapse-UI",
     "$cuiv:title_text_subtitle|default": "",
+    "$cuiv:anim_from": [ 14, -50 ],
+    "$cuiv:anim_to": [ 14, 4 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cui-anims.screen_outro_anim_push",
+      "@cui-anims.screen_outro_anim_pop",
+      "@cui-anims.screen_intro_anim_push",
+      "@cui-anims.screen_intro_anim_pop"
+    ],
+    
     "controls": [
       { "close_button@cui-common.close_button": {
           "ignored": "(not $cuiv:title_back_button)",

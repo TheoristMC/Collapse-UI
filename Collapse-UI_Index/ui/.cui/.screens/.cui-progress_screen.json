@@ -17,11 +17,14 @@
   ]},
   "cancel_button@cui-button.text_button": {
     "$pressed_button_name": "button.menu_exit",
-    "$cuiv:button_text": "#cancel_button_text",
     "size": [ 120, 25 ],
     "offset": [ -2, -12 ],
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
+    "$cuiv:button_type_panel": "cuiorigin-start_screen.button_label",
+    "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+    "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+    "$cuiv:button_image_texture": "textures/ui/.cui-assets/exit_icon",
     "bindings": [
       { "binding_name": "#cancel_visible",
         "binding_name_override": "#visible"
