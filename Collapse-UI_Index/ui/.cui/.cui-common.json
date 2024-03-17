@@ -193,6 +193,13 @@
           "color2": [ 0, 0, 0, 0 ],
           "anchor_from": "left_middle",
           "anchor_to": "left_middle"
+      }},
+      { "background": {
+          "ignored": "(not $cuigv:UIBackground)",
+          "type": "image",
+          "fill": true,
+          "layer": -95,
+          "texture": "textures/ui/.cui-assets/ui_background"
       }}
   ]},
   "close_button@cui-button.text_button": {
@@ -226,6 +233,13 @@
           "color2": [ 0, 0, 0, 0.7 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle"
+      }},
+      { "background": {
+          "ignored": "(not $cuigv:UIBackground)",
+          "type": "image",
+          "fill": true,
+          "layer": -95,
+          "texture": "textures/ui/.cui-assets/ui_background_blur"
       }}
   ]},
   "title_core": {
